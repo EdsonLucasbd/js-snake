@@ -2,6 +2,7 @@ const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
 const eatingEffect = new Audio("../assets/eat_effect.mp3")
 const score = document.getElementById('score-value')
+const scoreContainer = document.getElementById('score')
 const startButton = document.getElementById('start')
 const gameOverContainer = document.getElementById('game-over')
 const GRID_SIZE = 20
@@ -167,6 +168,7 @@ const handleRestartGameButton = () => {
   score.innerText = "00"
   canvas.style.filter = "blur(0)"
   gameOverContainer.classList.add('hidden')
+  scoreContainer.classList.remove('hidden')
   direction = 'up'
   food.x = randomPosition()
   food.y = randomPosition()
@@ -180,6 +182,7 @@ function endGame() {
   const gameOverScore = document.getElementById('game-over-score')
   gameOverScore.innerText = score.innerText
   gameOverContainer.classList.remove('hidden')
+  scoreContainer.classList.add('hidden')
 }
 
 const gameLoop = () => {

@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: black;
+  background-color: transparent;
   background-image: url("../assets/gameBackground.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -140,6 +140,62 @@ button:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  canvas {
+    left: 14rem;
+    height: 85%;
+    width: 26%;
+  }
+
+  #info {
+    justify-content: center;
+    height: 4.6875rem;
+    top: 1.5625rem;
+    padding: 6px;
+    right: 12.8rem;
+  }
+
+  #info p {
+    font-size: .375rem;
+  }
+
+  #score {
+    right: 14.5rem;
+  }
+  
+  #score p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: .625rem .875rem;
+    font-size: .5rem;
+    width: fit-content;
+    height: 2.5rem;
+  }
+  
+  #start {
+    bottom: 4rem;
+    left: 16.8rem;
+  }
+  
+  #restart {
+    width: fit-content;
+  }
+  
+  #game-over {
+    text-align: center;
+    font-size: 1rem;
+    left: 13rem;
+    width: 30%;
+    gap: 1.5rem;
+  }
+
+  #restart {
+    margin-top: 5rem;
   }
 }
 

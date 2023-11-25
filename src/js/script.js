@@ -164,11 +164,14 @@ const handleStartGameButton = () => {
 
 const handleRestartGameButton = () => {
   snake = [INITIAL_SNAKE_POSITION]
+  score.innerText = "00"
   canvas.style.filter = "blur(0)"
   gameOverContainer.classList.add('hidden')
   direction = 'up'
-  // food.x = randomPosition()
-  // food.y = randomPosition()
+  food.x = randomPosition()
+  food.y = randomPosition()
+
+  gameLoop()
 }
 
 function endGame() {

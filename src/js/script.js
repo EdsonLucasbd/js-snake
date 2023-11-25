@@ -5,7 +5,8 @@ const score = document.getElementById('score-value')
 const startButton = document.getElementById('start')
 const gameOverContainer = document.getElementById('game-over')
 const GRID_SIZE = 20
-const snake = [{x: 300, y: 420}, {x: 300, y: 400}]
+const INITIAL_SNAKE_POSITION = {x: 300, y: 420}
+let snake = [INITIAL_SNAKE_POSITION]
 let direction, interval
 
 const food = {
@@ -162,12 +163,12 @@ const handleStartGameButton = () => {
 }
 
 const handleRestartGameButton = () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  snake = [INITIAL_SNAKE_POSITION]
   canvas.style.filter = "blur(0)"
   gameOverContainer.classList.add('hidden')
-  drawGrid()
-  drawSnake()
-  drawFood()
+  direction = 'up'
+  // food.x = randomPosition()
+  // food.y = randomPosition()
 }
 
 function endGame() {

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../assets/gameBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+canvas {
+  position: absolute;
+  background-color: rgba(0, 22, 41, 84%);
+  box-shadow: 1px 5px 11px inset rgba(02,18,27,7.1);
+  border-radius: .5rem;
+  left: 2.5rem;
+  height: 75%;
+  width: 50%;
+}
+
+#info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: fit-content;
+  height: 5.875rem;
+  background-color: rgb(1 18 33 / 0.1);
+  border-radius: .5rem;
+  right: 2.25rem;
+  top: 5.9375rem;
+  padding: 1.25rem;
+}
+
+#info p {
+  color: #E5E9F0;
+  font-size: .75rem;
+}
+
+#score {
+  position: absolute;
+  right: 7.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#score p {
+  color: #E5E9F0;
+  font-size: 1.5rem;
+}
+
+button {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  padding: .625rem .875rem;
+  font-size: .75rem;
+  border-radius: .5rem;
+  border: none;
+  width: 10rem;
+  height: 3.5rem;
+  background-color: #FEA55F;
+}
+
+#start {
+  bottom: 8.125rem;
+  left: 10rem;
+}
+
+#pause {
+  left: 60rem
+}
+
+#restart {
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #ff8b32;
+  transition: all .2s ease-in-out;
+}
+
+#game-over {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  left: 31.5rem;
+  gap: 1rem;
+}
+
+#game-over p {
+  color: #FEA55F;
+  text-shadow: 0px 0px 6px rgb(254, 163, 93, 0.6);
+  -webkit-animation: blink 2s ease-in-out infinite both;
+  animation: blink 2s ease-in-out infinite both;
+}
+
+#restart {
+  /* position: absolute;
+  top: 8rem; */
+  margin-top: 8rem;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  canvas {
+    left: 24rem;
+    height: 85%;
+    width: 33%;
+  }
+
+  #info {
+    right: 24rem;
+  }
+
+  #info p {
+    font-size: .625rem;
+  }
+
+  #score {
+    right: 26rem;
+  }
+  
+  #score p {
+    font-size: 2rem;
+  }
+
+  #start {
+    font-size: 1rem;
+    width: 12.5rem;
+    height: 4.375rem;
+    left: 34rem;
+  }
+
+  #pause {
+    font-size: 1rem;
+    width: 12.5rem;
+    height: 4.375rem;
+    left: 58.5rem
+  }
+}
+
+.hidden {
+  display: none !important;
+}

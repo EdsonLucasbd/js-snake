@@ -189,13 +189,13 @@ button:hover {
   #game-over {
     text-align: center;
     font-size: 1rem;
-    left: 13rem;
+    left: 11rem;
     width: 30%;
     gap: 1.5rem;
   }
 
   #restart {
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 }
 

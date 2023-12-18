@@ -145,17 +145,17 @@ button:hover {
 
 @media (max-width: 640px) {
   canvas {
-    left: 7rem;
+    left: 5.5rem;
     height: 85%;
-    width: 43%;
+    width: 40%;
   }
 
   #info {
     justify-content: center;
     height: 4.6875rem;
-    top: 1.9rem;
+    top: 1.7rem;
     padding: 6px;
-    right: 6rem;
+    right: 4.5rem;
   }
 
   #info p {
@@ -163,7 +163,7 @@ button:hover {
   }
 
   #score {
-    right: 7.6rem;
+    right: 6rem;
   }
   
   #score p {
@@ -179,7 +179,7 @@ button:hover {
   
   #start {
     bottom: 6rem;
-    left: 25rem;
+    left: 19.5rem;
   }
   
   #restart {
